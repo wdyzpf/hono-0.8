@@ -1,0 +1,12 @@
+**/target/
+**/.idea/
+**/*.iml
+**/bin/
+**/.vertx/
+**/.factorypath
+
+# Eclipse files
+**/.classpath
+**/.project
+**/.settings/
+.checkstyle
