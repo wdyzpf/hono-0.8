@@ -1,23 +1,41 @@
+secret:
+  path: E:/eclipse/hono/hono-0.8/demo-certs/certs
 hono:
+  app:
+    maxInstances: 1
+    healthCheckBindAddress: 0.0.0.0
+    healthCheckPort: 8088
   auth:
-    name: Hono Messaging
+    host: ${hono.auth.host}
+    port: 5671
+    keyPath: ${secret.path}/hono-messaging-key.pem
+    certPath: ${secret.path}/hono-messaging-cert.pem
+    trustStorePath: ${secret.path}/trusted-certs.pem
+    name: 'Hono Messaging'
+    validation:
+      certPath: ${secret.path}/auth-server-cert.pem
   downstream:
-    name: Hono Messaging
-  metric:
-    jvm:
-      memory: false
-      thread: false
-    vertx: false
-    reporter:
-      console:
-        active: false
-        period: 5000
-      graphite:
-        active: false
-        period: 5000
+    host: hono-dispatch-router.hono
+    port: 5673
+    keyPath: ${secret.path}/hono-messaging-key.pem
+    certPath: ${secret.path}/hono-messaging-cert.pem
+    trustStorePath: ${secret.path}/trusted-certs.pem
+  messaging:
+    keyPath: ${secret.path}/hono-messaging-key.pem
+    certPath: ${secret.path}/hono-messaging-cert.pem
+    bindAddress: 0.0.0.0
+    validation:
+      sharedSecret: ${hono.regAssertion.sharedSecret}
+  metrics:
+    legacy: true
 
-# disable spring boot actuator endpoints, enable metrics
+# disable spring boot actuator endpoints
 endpoints:
   enabled: false
+
+management:
   metrics:
-    enabled: true
+    export:
+      graphite:
+        host: influxdb.hono
+        port: 2003

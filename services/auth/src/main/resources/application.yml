@@ -1,0 +1,29 @@
+secret:
+  path: E:/eclipse/hono/hono-0.8/demo-certs/certs
+spring:
+  profiles:
+    active: authentication-impl
+hono:
+  app:
+    maxInstances: 1
+  auth:
+    amqp:
+      bindAddress: 0.0.0.0
+      keyPath: ${secret.path}/auth-server-key.pem
+      certPath: ${secret.path}/auth-server-cert.pem
+      trustStorePath: ${secret.path}/trusted-certs.pem
+      insecurePortBindAddress: 0.0.0.0
+      insecurePortEnabled: true
+    svc:
+      permissionsPath: permissions.json
+#      permissionsPath: file://${secret.path}/permissions.json
+  metrics:
+    legacy: true
+    
+management:
+  metrics:
+    export:
+      graphite:
+        host: influxdb.hono
+        port: 2003
+

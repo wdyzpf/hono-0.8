@@ -121,12 +121,12 @@
         <version>${spring-boot.version}</version>
         <scope>runtime</scope>
       </dependency>
-      <dependency>
+     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-actuator</artifactId>
         <version>${spring-boot.version}</version>
       </dependency>
-      <dependency>
+     <dependency>
         <groupId>io.micrometer</groupId>
         <artifactId>micrometer-core</artifactId>
         <version>${micrometer.version}</version>
