@@ -81,6 +81,7 @@ public final class SimpleAuthenticationServer extends AmqpServiceBase<ServiceCon
 
     /**
      * Processes the AMQP <em>open</em> frame received from a peer.
+     * 处理从对等方接收的AMQP
      * <p>
      * Checks if the open frame contains a desired <em>ADDRESS_AUTHZ</em> capability and if so,
      * adds the authenticated clients' authorities to the properties of the open frame sent

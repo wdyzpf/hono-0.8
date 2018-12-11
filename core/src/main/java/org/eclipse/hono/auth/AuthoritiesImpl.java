@@ -31,10 +31,12 @@ public final class AuthoritiesImpl implements Authorities {
 
     /**
      * The prefix used to indicate an authority on a resource.
+     * 用于指示资源权限的前缀
      */
     public static final String PREFIX_RESOURCE = "r:";
     /**
      * The prefix used to indicate an authority on an operation.
+     * 用于指示操作权限的前缀
      */
     public static final String PREFIX_OPERATION = "o:";
 

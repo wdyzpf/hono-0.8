@@ -34,6 +34,7 @@ import io.vertx.core.Future;
 
 /**
  * A Spring Boot application exposing an AMQP based endpoint that implements Hono's device registry.
+ * Spring Boot应用程序，公开基于AMQP的端点，实现Hono的设备注册。
  * <p>
  * The application implements Hono's <a href="https://www.eclipse.org/hono/api/Device-Registration-API/">Device Registration API</a>
  * and <a href="https://www.eclipse.org/hono/api/Credentials-API/">Credentials API</a>.
@@ -51,7 +52,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Sets the credentials service implementation this server is based on.
-     * 
+     * 设置此服务器所基于的凭据服务实现
      * @param credentialsService The service implementation.
      * @throws NullPointerException if service is {@code null}.
      */
@@ -62,7 +63,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Sets the registration service implementation this server is based on.
-     *
+     * 设置此服务器所基于的注册服务实现。
      * @param registrationService The registrationService to set.
      * @throws NullPointerException if service is {@code null}.
      */
@@ -73,7 +74,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Sets the tenant service implementation this server is based on.
-     *
+     * 设置此服务器所基于的租户服务实现。
      * @param tenantService The tenantService to set.
      * @throws NullPointerException if service is {@code null}.
      */
@@ -84,7 +85,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Sets the authentication service implementation this server is based on.
-     *
+     * 设置此服务器所基于的身份验证服务实现。
      * @param authenticationService The authenticationService to set.
      * @throws NullPointerException if service is {@code null}.
      */
@@ -145,7 +146,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Registers any additional health checks that the service implementation components provide.
-     * 
+     * 注册服务实现组件提供的任何其他运行状况检查。
      * @return A succeeded future.
      */
     @Override

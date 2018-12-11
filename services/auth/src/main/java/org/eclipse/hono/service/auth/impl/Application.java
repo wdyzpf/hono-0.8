@@ -27,6 +27,7 @@ import io.vertx.core.Future;
 /**
  * A Spring Boot application exposing an AMQP based endpoint for retrieving a JSON Web Token for
  * a connection that has been authenticated using SASL.
+ * Spring Boot应用程序，公开基于AMQP的端点，用于检索已使用SASL进行身份验证的连接的JSON Web令牌。
  *
  */
 @ComponentScan(basePackages = "org.eclipse.hono.service.auth")
@@ -49,7 +50,7 @@ public class Application extends AbstractApplication {
 
     /**
      * Deploys the (file-based) authentication service implementation.
-     * 
+     * 部署（基于文件的）身份验证服务实现。
      * @param maxInstances Ignored. This application always deploys a single instance of
      *                     the authentication service.
      */

@@ -54,6 +54,7 @@ public abstract class BaseAuthenticationService<T> extends ConfigurationSupporti
     /**
      * Subclasses should override this method to create required resources
      * during startup.
+     * 子类应重写此方法以在启动期间创建所需的资源。
      * <p>
      * This implementation always completes the start future.
      * 

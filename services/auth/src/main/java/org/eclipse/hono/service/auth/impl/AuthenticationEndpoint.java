@@ -43,7 +43,7 @@ public class AuthenticationEndpoint extends AbstractAmqpEndpoint<AuthenticationS
 
     /**
      * Creates a new endpoint for a Vertx instance.
-     * 
+     * 为Vertx实例创建新端点
      * @param vertx The Vertx instance.
      */
     @Autowired

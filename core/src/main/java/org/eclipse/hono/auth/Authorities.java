@@ -19,13 +19,13 @@ import org.eclipse.hono.util.ResourceIdentifier;
 
 /**
  * A collection of authorities granted on resources and/or operations.
- *
+ * 授予资源和操作权限的集合。
  */
 public interface Authorities {
 
     /**
      * Checks if these authorities include claims allowing an intended activity on a resource.
-     * 
+     * 检查这些权限是否包含允许对资源进行预期活动的声明
      * @param resourceId The resource.
      * @param intent The intended activity on the resource
      * @return {@code true} if the activity is allowed.

@@ -61,6 +61,7 @@ public final class FileBasedAuthenticationService extends AbstractHonoAuthentica
 
     private static final Map<String, Authorities> roles = new HashMap<>();
     private static final Map<String, JsonObject> users = new HashMap<>();
+    //令牌助手
     private AuthTokenHelper tokenFactory;
 
     @Autowired
@@ -71,7 +72,7 @@ public final class FileBasedAuthenticationService extends AbstractHonoAuthentica
 
     /**
      * Sets the factory to use for creating tokens asserting a client's identity and authorities.
-     * 
+     * 设置工厂用于创建声明客户身份和权限的令牌。
      * @param tokenFactory The factory.
      * @throws NullPointerException if factory is {@code null}.
      */
@@ -128,7 +129,6 @@ public final class FileBasedAuthenticationService extends AbstractHonoAuthentica
     }
 
     private void parsePermissions(final JsonObject permissionsObject) {
-
         Objects.requireNonNull(permissionsObject);
         parseRoles(permissionsObject.getJsonObject(FIELD_ROLES, new JsonObject()));
         parseUsers(permissionsObject.getJsonObject(FIELD_USERS, new JsonObject()));

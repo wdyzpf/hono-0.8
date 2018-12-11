@@ -26,17 +26,20 @@ hono:
       insecurePortBindAddress: 0.0.0.0
       insecurePortEnabled: true
     svc:
-      filename: /var/lib/hono/device-registry/device-identities.json
+      filename: ${secret.path}/device-identities.json
+#      filename: /var/lib/hono/device-registry/device-identities.json
       saveToFile: true
       signing:
         sharedSecret: ${hono.regAssertion.sharedSecret}
   credentials:
     svc:
-      filename: /var/lib/hono/device-registry/credentials.json
+      filename: ${secret.path}/credentials.json
+#      filename: /var/lib/hono/device-registry/credentials.json
       saveToFile: true
   tenant:
     svc:
-      filename: /var/lib/hono/device-registry/tenants.json
+      filename: ${secret.path}/tenants.json
+#      filename: /var/lib/hono/device-registry/tenants.json
       saveToFile: true
   metrics:
     legacy: true

@@ -19,7 +19,7 @@
   </parent>
   <artifactId>hono-service-auth</artifactId>
   <name>Hono Auth</name>
-  <description>A default identity provider for authenticating Hono components and consumers.</description>
+  <description>A default identity provider for authenticating Hono components and consumers.用于验证Hono组件和使用者的默认身份提供程序</description>
   <dependencies>
     <dependency>
       <groupId>org.eclipse.hono</groupId>

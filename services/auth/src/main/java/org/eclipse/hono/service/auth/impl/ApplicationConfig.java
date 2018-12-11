@@ -43,7 +43,7 @@ public class ApplicationConfig {
 
     /**
      * Gets the singleton Vert.x instance to be used by Hono.
-     * 
+     * 简单认证服务器应用程序的Spring Boot配置。
      * @return the instance.
      */
     @Bean
@@ -59,7 +59,7 @@ public class ApplicationConfig {
 
     /**
      * Creates a new Authentication Server instance and exposes it as a Spring Bean.
-     * 
+     * 创建一个新的Authentication Server实例并将其公开为Spring Bean。
      * @return The new instance.
      */
     @Bean(name = BEAN_NAME_SIMPLE_AUTHENTICATION_SERVER)
@@ -70,7 +70,7 @@ public class ApplicationConfig {
 
     /**
      * Exposes a factory for Authentication Server instances as a Spring bean.
-     * 
+     * 将Authentication Server实例的工厂公开为Spring bean。
      * @return The factory.
      */
     @Bean
@@ -82,7 +82,7 @@ public class ApplicationConfig {
 
     /**
      * Exposes properties for configuring the application properties a Spring bean.
-     *
+     * 公开用于将应用程序属性配置为Spring bean的属性。
      * @return The application configuration properties.
      */
     @Bean
@@ -93,7 +93,7 @@ public class ApplicationConfig {
 
     /**
      * Exposes this service's AMQP endpoint configuration properties as a Spring bean.
-     * 
+     * 将此服务的AMQP端点配置属性公开为Spring bean。
      * @return The properties.
      */
     @Bean
@@ -152,7 +152,7 @@ public class ApplicationConfig {
 
     /**
      * Customizer for meter registry.
-     * 
+     * 用于仪表注册的定制器。
      * @return The new meter registry customizer.
      */
     @Bean

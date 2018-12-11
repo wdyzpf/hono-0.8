@@ -21,12 +21,13 @@ import io.vertx.core.json.JsonObject;
 
 /**
  * A service for verifying credentials provided by a client in a SASL exchange.
- *
+ * 用于验证客户端在SASL交换中提供的凭据的服务。
  */
 public interface AuthenticationService {
 
     /**
      * Authenticates a user based on information provided in a SASL exchange.
+     * 根据SASL交换中提供的信息对用户进行身份验证。
      * <p>
      * An authentication request for a client using SASL PLAIN looks like this:
      * <pre>
@@ -36,6 +37,7 @@ public interface AuthenticationService {
      *                                      // this value contains the username, password and an
      *                                      // optional authorization id
      * }
+     * 客户端提供的Base64编码SASL响应此值包含用户名，密码和可选的授权ID
      * </pre>
      * <p>
      * A request using SASL EXTERNAL looks like this:
